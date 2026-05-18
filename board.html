@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A1 Swedish 게시판 — 예약 문의·후기" />
+  <title>게시판 | A1 Swedish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">A1 <span>Swedish</span></a>
+      <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="nav-main">
+          <li><a href="index.html">홈</a></li>
+          <li><a href="blog.html">블로그</a></li>
+          <li><a href="board.html" class="active">게시판</a></li>
+          <li><a href="index.html#contact">문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">Board</p>
+      <h1>게시판</h1>
+      <p>예약 문의, 방문 후기, 궁금한 점을 자유롭게 남겨 주세요.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <div class="board-wrap">
+        <div class="board-toolbar">
+          <div class="board-search">
+            <input type="search" id="board-search" placeholder="제목·내용 검색" aria-label="검색" />
+            <button type="button" id="board-search-btn" class="btn btn-outline btn-sm">검색</button>
+          </div>
+          <a href="board-write.html" class="btn btn-primary btn-sm">+ 글쓰기</a>
+        </div>
+        <table class="board-table">
+          <thead>
+            <tr>
+              <th class="col-num">번호</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th class="col-date">날짜</th>
+              <th class="col-views">조회</th>
+            </tr>
+          </thead>
+          <tbody id="board-tbody"></tbody>
+        </table>
+        <div id="board-pagination" class="board-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2026 A1 Swedish</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/board.js"></script>
+  <script>
+    whenDataReady(() => {
+      renderBoardList();
+      initBoardSearch();
+    });
+  </script>
+</body>
+</html>

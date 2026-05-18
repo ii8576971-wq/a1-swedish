@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>블로그 글쓰기 | A1 Swedish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">A1 <span>Swedish</span></a>
+      <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="nav-main">
+          <li><a href="blog.html" class="active">블로그</a></li>
+          <li><a href="board.html">게시판</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-label">Write</p>
+      <h1>블로그 글 작성</h1>
+      <p>새 소식과 마사지 정보를 등록하세요. 브라우저에 저장됩니다.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0;">
+    <div class="container">
+      <form id="blog-write-form" class="write-form">
+        <div class="form-group">
+          <label for="title">제목 *</label>
+          <input type="text" id="title" name="title" required placeholder="글 제목을 입력하세요" />
+        </div>
+        <div class="form-group">
+          <label for="excerpt">요약</label>
+          <input type="text" id="excerpt" name="excerpt" placeholder="목록에 표시될 한 줄 요약 (선택)" />
+        </div>
+        <div class="form-group">
+          <label for="author">작성자</label>
+          <input type="text" id="author" name="author" value="A1 Swedish" />
+        </div>
+        <div class="form-group">
+          <label for="image">대표 이미지 URL</label>
+          <input type="url" id="image" name="image" placeholder="https://..." />
+        </div>
+        <div class="form-group">
+          <label for="content">본문 *</label>
+          <textarea id="content" name="content" required placeholder="본문을 입력하세요"></textarea>
+        </div>
+        <div class="form-actions">
+          <a href="blog.html" class="btn btn-ghost">취소</a>
+          <a href="admin.html" class="btn btn-outline btn-sm">서버에 올리기</a>
+          <button type="submit" class="btn btn-primary">등록하기</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2026 A1 Swedish</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/blog-data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+  <script>
+    whenDataReady(initBlogWriteForm);
+  </script>
+</body>
+</html>

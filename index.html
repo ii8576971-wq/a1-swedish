@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A1 Swedish — 서울 프리미엄 스웨디시 마사지. 어깨·허리 결림, 스트레스·수면 케어. 전문 테라피스트의 클래식 스웨디시와 아로마 오일 시술." />
+  <meta name="keywords" content="스웨디시 마사지, 스웨디시, 마사지, 아로마 마사지, 어깨 마사지, 허리 마사지, 힐링, A1 Swedish" />
+  <title>A1 Swedish | 스웨디시 마사지 · 웰니스 블로그</title>
+  <link rel="canonical" href="index.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">A1 <span>Swedish</span></a>
+      <button class="nav-toggle" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav>
+        <ul class="nav-main">
+          <li><a href="index.html" class="active">홈</a></li>
+          <li><a href="#services">서비스</a></li>
+          <li><a href="blog.html">블로그</a></li>
+          <li><a href="board.html">게시판</a></li>
+          <li><a href="#contact">문의</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="container hero-content">
+      <span class="hero-label">Swedish Massage & Wellness</span>
+      <h1>몸과 마음을<br />깊이 이완시키는 스웨디시</h1>
+      <p>부드러운 스트로크와 전문 테라피스트의 손길로 일상의 피로를 풀어 드립니다. 블로그와 게시판에서 소식과 후기를 확인하세요.</p>
+      <div class="hero-actions">
+        <a href="blog.html" class="btn btn-primary">블로그 보기</a>
+        <a href="board.html" class="btn btn-outline">게시판</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section about-strip" id="about">
+    <div class="container about-inner">
+      <img class="about-image" src="images/blog/b2-hero.jpg" alt="스웨디시 마사지 스파" loading="lazy" />
+      <div class="about-text">
+        <span class="section-label">About Us</span>
+        <h2>진정한 휴식을 위한<br />스웨디시 테라피</h2>
+        <p>A1 Swedish는 클래식 스웨디시 테크닉을 기반으로, 개인별 컨디션에 맞춘 맞춤 시술을 제공합니다. 천연 아로마 오일과 조용한 프라이빗 공간에서 몸의 긴장을 풀고 마음의 여유를 되찾으세요.</p>
+        <p>블로그에서는 마사지 정보·관리 팁을, 게시판에서는 예약 문의와 방문 후기를 확인하실 수 있습니다.</p>
+        <a href="blog.html" class="btn btn-primary">더 알아보기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-label">Services</p>
+        <h2>시술 프로그램</h2>
+        <p>목적과 시간에 맞는 코스를 선택하세요.</p>
+      </header>
+      <div class="services-grid">
+        <article class="service-item">
+          <div class="service-icon">🌿</div>
+          <h3>클래식 스웨디시</h3>
+          <p>전신 롱 스트로크와 주무르기로 근육 이완 · 60 / 90분</p>
+        </article>
+        <article class="service-item">
+          <div class="service-icon">✨</div>
+          <h3>아로마 스웨디시</h3>
+          <p>에센셜 오일과 결합한 깊은 이완 · 90 / 120분</p>
+        </article>
+        <article class="service-item">
+          <div class="service-icon">💆</div>
+          <h3>딥티슈 케어</h3>
+          <p>어깨·허리 집중 케어와 스웨디시 조합 · 90분</p>
+        </article>
+        <article class="service-item">
+          <div class="service-icon">🕯️</div>
+          <h3>커플 테라피</h3>
+          <p>두 분이 함께하는 프라이빗 룸 시술 · 문의</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--ivory);">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-label">Blog</p>
+        <h2>최신 블로그</h2>
+        <p>스웨디시 마사지와 웰니스에 관한 이야기</p>
+      </header>
+      <div id="home-blog" class="card-grid"></div>
+      <p style="text-align:center;margin-top:2rem;">
+        <a href="blog.html" class="btn btn-outline">전체 블로그 보기</a>
+        <a href="blog-write.html" class="btn btn-ghost">글 작성</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <header class="section-header">
+        <p class="section-label">Community</p>
+        <h2>게시판</h2>
+        <p>예약 문의, 후기, 궁금한 점을 남겨 주세요</p>
+      </header>
+      <div class="board-wrap">
+        <table class="board-table">
+          <thead>
+            <tr>
+              <th class="col-num">번호</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th class="col-date">날짜</th>
+            </tr>
+          </thead>
+          <tbody id="home-board"></tbody>
+        </table>
+      </div>
+      <p style="text-align:center;margin-top:2rem;">
+        <a href="board.html" class="btn btn-primary">게시판 전체보기</a>
+        <a href="board-write.html" class="btn btn-outline">글쓰기</a>
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta-band">
+        <h2>예약 · 문의</h2>
+        <p>전화 또는 게시판으로 편하게 연락 주세요. 평일·주말 10:00 – 22:00</p>
+        <a href="board-write.html" class="btn btn-outline">문의 글 남기기</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">A1 <span>Swedish</span></div>
+          <p>몸과 마음을 깊이 이완시키는 프리미엄 스웨디시 마사지.<br>블로그와 게시판으로 소식을 나눕니다.</p>
+        </div>
+        <div class="footer-col">
+          <h4>바로가기</h4>
+          <ul>
+            <li><a href="blog.html">블로그</a></li>
+            <li><a href="blog-write.html">글쓰기</a></li>
+            <li><a href="board.html">게시판</a></li>
+            <li><a href="board-write.html">게시글 작성</a></li>
+            <li><a href="admin.html">서버에 글 올리기</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>문의</h4>
+          <ul>
+            <li>운영시간 10:00 – 22:00</li>
+            <li>전화 02-0000-0000</li>
+            <li>카카오 @a1swedish</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 A1 Swedish. All rights reserved.</span>
+        <span>Swedish Massage & Wellness Blog</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/blog-data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/blog.js"></script>
+  <script src="js/board.js"></script>
+  <script>
+    whenDataReady(() => {
+      renderHomeBlogPreview("home-blog", 3);
+      renderHomeBoardPreview("home-board", 5);
+    });
+  </script>
+</body>
+</html>
