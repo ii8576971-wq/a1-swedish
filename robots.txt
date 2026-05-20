@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin.html
+Disallow: /blog-write.html
+Disallow: /board-write.html
+
+Sitemap: https://ii8576971-wq.github.io/a1-swedish/sitemap.xml

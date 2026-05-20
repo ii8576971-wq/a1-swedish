@@ -110,6 +110,18 @@ function renderBoardView() {
 
   document.title = `${post.title} | A1 Swedish`;
 
+  const postUrl =
+    typeof absoluteUrl === "function"
+      ? absoluteUrl(`board-view.html?id=${encodeURIComponent(post.id)}`)
+      : `board-view.html?id=${encodeURIComponent(post.id)}`;
+  let canonical = document.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.rel = "canonical";
+    document.head.appendChild(canonical);
+  }
+  canonical.href = postUrl;
+
   container.innerHTML = `
     <article class="post-view">
       <header class="post-view-header">

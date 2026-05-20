@@ -85,16 +85,21 @@ function setPageMeta(post) {
   }
   meta.content = desc;
 
+  const postUrl =
+    typeof absoluteUrl === "function"
+      ? absoluteUrl(`blog-view.html?id=${encodeURIComponent(post.id)}`)
+      : `${location.origin}${location.pathname.replace(/[^/]+$/, "")}blog-view.html?id=${encodeURIComponent(post.id)}`;
+
   const canonical = document.querySelector('link[rel="canonical"]');
-  if (canonical && post.slug) {
-    canonical.href = `${location.origin}${location.pathname.replace(/[^/]+$/, "")}blog-view.html?id=${post.id}`;
-  }
+  if (canonical) canonical.href = postUrl;
 
   [
     ["og:title", post.title],
     ["og:description", desc],
+    ["og:url", postUrl],
     ["og:image", resolveImageUrl(post.image)],
     ["og:type", "article"],
+    ["og:locale", "ko_KR"],
   ].forEach(([prop, content]) => {
     let tag = document.querySelector(`meta[property="${prop}"]`);
     if (!tag) {
@@ -104,6 +109,23 @@ function setPageMeta(post) {
     }
     tag.content = content;
   });
+
+  const existingLd = document.getElementById("post-jsonld");
+  if (existingLd) existingLd.remove();
+  const ld = document.createElement("script");
+  ld.type = "application/ld+json";
+  ld.id = "post-jsonld";
+  ld.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: desc,
+    datePublished: post.date,
+    author: { "@type": "Organization", name: post.author || "A1 Swedish" },
+    image: resolveImageUrl(post.image),
+    mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+  });
+  document.head.appendChild(ld);
 }
 
 function formatInlineMarkdown(text) {
